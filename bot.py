@@ -123,7 +123,7 @@ app.mount("/", StaticFiles(directory="static", html=True), name="static")
 async def main():
   await bot.start()
   print("🤖 Telegram Bot Started Successfully!")
-  config = uvicorn.Config(app, host="0.0.0.0", port=8080, log_level="info")
+  config = uvicorn.Config(app, host="0.0.0.0", port=8081, log_level="info")
   server = uvicorn.Server(config)
   await server.serve()
 
